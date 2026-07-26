@@ -1,0 +1,97 @@
+name: Build and publish playlist
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - channels.csv
+      - build.py
+      - .github/workflows/build-playlist.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: playlist-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build tv.m3u
+        run: python build.py
+
+      - name: Verify playlist
+        run: |
+          count=$(grep -c '^#EXTINF' tv.m3u)
+          echo "Jumlah channel: $count"
+
+          if [ "$count" -ne 52 ]; then
+            echo "ERROR: Playlist seharusnya berisi 52 channel."
+            exit 1
+          fi
+
+      - name: Save generated playlist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add tv.m3u
+
+          if git diff --cached --quiet; then
+            echo "tv.m3u tidak mengalami perubahan."
+          else
+            git commit -m "Generate tv.m3u from channels.csv"
+            git push
+          fi
+
+      - name: Prepare GitHub Pages
+        run: |
+          mkdir -p _site
+          cp tv.m3u _site/tv.m3u
+          touch _site/.nojekyll
+
+          cat > _site/index.html <<'EOF'
+          <!doctype html>
+          <html lang="id">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Curated IPTV Playlist</title>
+          </head>
+          <body>
+            <h1>Curated IPTV Playlist</h1>
+            <p><a href="tv.m3u">Buka atau unduh tv.m3u</a></p>
+          </body>
+          </html>
+          EOF
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
