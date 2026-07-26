@@ -1,1 +1,5 @@
 name,category,country,language,url,logo,priority,status,source,last_checked,notes
+Al Jazeera English,World News,Qatar,English,https://live-hls-web-aje.getaj.net/AJE/index.m3u8,,1,active,Official Al Jazeera CDN,2026-07-26,International news
+France 24 English,World News,France,English,https://static.france24.com/live/F24_EN_HI_HLS/live_web.m3u8,,2,active,Official France 24 CDN,2026-07-26,International news
+NHK World-Japan,World News,Japan,English,https://nhkworld.webcdn.stream.ne.jp/www11/nhkworld-tv/global/263941/live_wa_s.m3u8,,3,active,Official NHK CDN,2026-07-26,News and programs from Japan
+DW English,World News,Germany,English,https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8,,4,active,DW Akamai stream,2026-07-26,International news
