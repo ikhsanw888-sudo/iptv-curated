@@ -3,7 +3,7 @@
 Playlist utama:
 
 - `playlist-ikhsan.m3u`
-- Total: **70 entri**
+- Total: **50 entri**
 - Format stream: **HLS/M3U8 saja**
 - Fokus: Indonesia, sepak bola/olahraga, berita dunia, bisnis, dokumenter, anak, dan musik.
 
@@ -12,7 +12,7 @@ Playlist utama:
 Setelah file diunggah ke root repository:
 
 ```text
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-ikhsan.m3u
+https://tinyurl.com/ikhtv
 ```
 
 ## Struktur repository yang disarankan
