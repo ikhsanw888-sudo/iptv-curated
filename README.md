@@ -1,36 +1,30 @@
-# IPTV Curated
+# IPTV Curated — Final STB Edition
 
-Playlist IPTV ringkas yang dihasilkan otomatis dari playlist publik iptv-org.
+Playlist utama:
 
-## URL untuk STB
+- `playlist-ikhsan.m3u`
+- Total: **70 entri**
+- Format stream: **HLS/M3U8 saja**
+- Fokus: Indonesia, sepak bola/olahraga, berita dunia, bisnis, dokumenter, anak, dan musik.
 
-### Semua kategori
+## URL GitHub Raw
+
+Setelah file diunggah ke root repository:
 
 ```text
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-ikhsan.m3u
 ```
 
-### Playlist khusus
+## Struktur repository yang disarankan
 
 ```text
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-favorites.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-indonesia.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-news.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-business.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-documentary.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-kids.m3u
-https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-music.m3u
+iptv-curated/
+├── README.md
+└── playlist-ikhsan.m3u
 ```
 
-## Memperbarui playlist
+File lama, script Python, `config.json`, dan folder `.github` boleh dihapus karena playlist ini bersifat statis dan sudah dikurasi.
 
-Buka **Actions → Update IPTV playlists → Run workflow**.
+## Catatan
 
-Workflow juga dijadwalkan setiap hari sekitar pukul 03.15 WIB.
-
-## Mengubah daftar pilihan
-
-Edit `config.json`, commit, push, kemudian jalankan workflow kembali.
-
-> Hasil pengecekan dari GitHub Actions dapat berbeda dari koneksi rumah karena
-> pembatasan wilayah, ISP, codec, token stream, atau perubahan dari penyedia.
+Semua URL berasal dari snapshot IPTV-org yang Anda unggah. Playlist telah dibersihkan dari stream DASH/MPD agar lebih cocok untuk STB, tetapi ketersediaan siaran tetap dapat berubah atau dipengaruhi pembatasan wilayah.
