@@ -1,63 +1,63 @@
 # IPTV Stream Test Report
 
 - Total: **52**
-- PASS: **40**
-- REVIEW: **2**
-- FAIL: **10**
+- PASS: **46**
+- REVIEW: **0**
+- FAIL: **6**
 
 > Pengujian dilakukan dari GitHub Actions, bukan dari jaringan STB di Indonesia. Hasil REVIEW dapat disebabkan geo-blocking, kebutuhan header khusus, atau pembatasan CDN.
 
 | Result | Channel | Category | HTTP | Response | Detail |
 |---|---|---|---:|---:|---|
-| PASS | Metro TV | Indonesia | 200 | 1917 ms | Manifest dan segmen media dapat diakses |
-| PASS | TVRI Nasional | Indonesia | 200 | 1065 ms | Manifest dan segmen media dapat diakses |
-| FAIL | CNBC Indonesia | Indonesia | 404 | 822 ms | URL tidak ditemukan (HTTP 404) |
-| REVIEW | BeritaSatu | Indonesia | 403 | 708 ms | Akses dibatasi atau kemungkinan geo-block: HTTP 403: Forbidden |
-| FAIL | TVRI Sport | Indonesia | 404 | 1083 ms | URL tidak ditemukan (HTTP 404) |
-| PASS | TVRI World | Indonesia | 200 | 801 ms | Manifest dan segmen media dapat diakses |
-| PASS | Rajawali TV (RTV) | Indonesia | 200 | 4555 ms | Manifest dan segmen media dapat diakses |
-| PASS | Garuda TV | Indonesia | 200 | 1433 ms | Manifest dan segmen media dapat diakses |
-| PASS | FIFA+ | Football & Sports | 200 | 365 ms | Manifest dan segmen media dapat diakses |
-| REVIEW | CBS Sports Golazo | Football & Sports | 500 | 442 ms | Server sedang bermasalah: HTTP 500: Domain Not Found |
-| PASS | SportsGrid | Football & Sports | 200 | 334 ms | Manifest dan segmen media dapat diakses |
-| PASS | beIN SPORTS Xtra | Football & Sports | 200 | 240 ms | Manifest dan segmen media dapat diakses |
-| PASS | Red Bull TV | Football & Sports | 200 | 316 ms | Manifest dan segmen media dapat diakses |
-| PASS | CBS Sports HQ | Football & Sports | 200 | 805 ms | Manifest dan segmen media dapat diakses |
-| FAIL | FUEL TV | Football & Sports | 404 | 115 ms | URL tidak ditemukan (HTTP 404) |
-| PASS | Fight Network | Football & Sports | 200 | 317 ms | Manifest dan segmen media dapat diakses |
-| PASS | World Poker Tour | Football & Sports | 200 | 137 ms | Manifest dan segmen media dapat diakses |
-| FAIL | EDGEsport | Football & Sports | 0 | 103 ms | [Errno -2] Name or service not known |
-| FAIL | Al Jazeera English | World News | 0 | 159 ms | [Errno -2] Name or service not known |
-| FAIL | France 24 English | World News | 200 | 282 ms | Master playlist terbuka, tetapi variant gagal: HTTP 400: Bad Request |
-| FAIL | NHK World-Japan | World News | 404 | 1480 ms | URL tidak ditemukan (HTTP 404) |
-| PASS | DW English | World News | 200 | 208 ms | Manifest dan segmen media dapat diakses |
-| PASS | BBC News North America | World News | 200 | 809 ms | Manifest dan segmen media dapat diakses |
-| PASS | CNA | World News | 200 | 338 ms | Manifest dan segmen media dapat diakses |
-| PASS | TRT World | World News | 200 | 301 ms | Manifest dan segmen media dapat diakses |
-| PASS | ABC News Live | World News | 200 | 797 ms | Manifest dan segmen media dapat diakses |
-| PASS | Sky News | World News | 200 | 861 ms | Manifest dan segmen media dapat diakses |
-| PASS | Euronews English | World News | 200 | 572 ms | Manifest dan segmen media dapat diakses |
-| PASS | CGTN English | World News | 200 | 389 ms | Manifest dan segmen media dapat diakses |
-| PASS | i24NEWS English | World News | 200 | 422 ms | Manifest dan segmen media dapat diakses |
-| PASS | Arirang TV | World News | 200 | 1218 ms | Manifest dan segmen media dapat diakses |
-| PASS | France 24 Arabic | World News | 200 | 568 ms | Manifest dan segmen media dapat diakses |
-| PASS | CBS News 24/7 | World News | 200 | 714 ms | Manifest dan segmen media dapat diakses |
-| PASS | Bloomberg Television US | Business | 200 | 272 ms | Manifest dan segmen media dapat diakses |
-| PASS | Yahoo! Finance | Business | 200 | 232 ms | Manifest dan segmen media dapat diakses |
-| PASS | CGTN Global Biz | Business | 200 | 206 ms | Manifest dan segmen media dapat diakses |
-| FAIL | NASA Live (Legacy Feed) | Documentary | 404 | 186 ms | URL tidak ditemukan (HTTP 404) |
-| PASS | Smithsonian Channel Selects | Documentary | 200 | 764 ms | Manifest dan segmen media dapat diakses |
-| PASS | Love Nature | Documentary | 200 | 743 ms | Manifest dan segmen media dapat diakses |
-| PASS | CGTN Documentary | Documentary | 200 | 376 ms | Manifest dan segmen media dapat diakses |
-| FAIL | Docurama | Documentary | 0 | 172 ms | [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010) |
-| PASS | Wonder | Documentary | 200 | 178 ms | Manifest dan segmen media dapat diakses |
-| PASS | PBS Nature | Documentary | 200 | 178 ms | Manifest dan segmen media dapat diakses |
-| PASS | MagellanTV Now | Documentary | 200 | 441 ms | Manifest dan segmen media dapat diakses |
-| PASS | PBS Kids | Kids | 200 | 355 ms | Manifest dan segmen media dapat diakses |
-| PASS | Moonbug | Kids | 200 | 184 ms | Manifest dan segmen media dapat diakses |
-| FAIL | Kidoodle.TV | Kids | 200 | 190 ms | Respons dapat diakses, tetapi bukan manifest HLS #EXTM3U (Content-Type: application/vnd.apple.mpegurl) |
-| PASS | Biznet Kids | Kids | 200 | 1690 ms | Manifest dan segmen media dapat diakses |
-| PASS | Vevo Pop | Music | 200 | 534 ms | Manifest dan segmen media dapat diakses |
-| PASS | Vevo Country | Music | 200 | 822 ms | Manifest dan segmen media dapat diakses |
-| PASS | Stingray Remember the 80s | Music | 200 | 311 ms | Manifest dan segmen media dapat diakses |
-| PASS | Stingray Greatest Hits | Music | 200 | 320 ms | Manifest dan segmen media dapat diakses |
+| PASS | Metro TV | Indonesia | 200 | 1842 ms | Manifest dan segmen media dapat diakses |
+| PASS | TVRI Nasional | Indonesia | 200 | 931 ms | Manifest dan segmen media dapat diakses |
+| FAIL | CNBC Indonesia | Indonesia | 0 | 792 ms | RemoteDisconnected: Remote end closed connection without response |
+| FAIL | BeritaSatu | Indonesia | 0 | 264 ms | [Errno -2] Name or service not known |
+| PASS | UEFA Champions League | Indonesia | 200 | 963 ms | Manifest dan segmen media dapat diakses |
+| PASS | TVRI World | Indonesia | 200 | 958 ms | Manifest dan segmen media dapat diakses |
+| PASS | Rajawali TV (RTV) | Indonesia | 200 | 526 ms | Manifest dan segmen media dapat diakses |
+| PASS | Garuda TV | Indonesia | 200 | 1385 ms | Manifest dan segmen media dapat diakses |
+| PASS | FIFA+ | Football & Sports | 200 | 386 ms | Manifest dan segmen media dapat diakses |
+| PASS | CBS Sports Golazo Network | Football & Sports | 200 | 3269 ms | Manifest dan segmen media dapat diakses |
+| PASS | SportsGrid | Football & Sports | 200 | 333 ms | Manifest dan segmen media dapat diakses |
+| PASS | beIN SPORTS Xtra | Football & Sports | 200 | 273 ms | Manifest dan segmen media dapat diakses |
+| PASS | Red Bull TV | Football & Sports | 200 | 228 ms | Manifest dan segmen media dapat diakses |
+| PASS | CBS Sports HQ | Football & Sports | 200 | 3117 ms | Manifest dan segmen media dapat diakses |
+| PASS | FUEL TV | Football & Sports | 200 | 318 ms | Manifest dan segmen media dapat diakses |
+| PASS | Fight Network | Football & Sports | 200 | 278 ms | Manifest dan segmen media dapat diakses |
+| PASS | World Poker Tour | Football & Sports | 200 | 404 ms | Manifest dan segmen media dapat diakses |
+| PASS | Xtreme Outdoor by HISTORY | Football & Sports | 200 | 792 ms | Manifest dan segmen media dapat diakses |
+| FAIL | Al Jazeera English | World News | 404 | 195 ms | URL tidak ditemukan (HTTP 404) |
+| PASS | France 24 English | World News | 200 | 303 ms | Manifest dan segmen media dapat diakses |
+| FAIL | NHK World-Japan | World News | 404 | 1615 ms | URL tidak ditemukan (HTTP 404) |
+| PASS | DW English | World News | 200 | 256 ms | Manifest dan segmen media dapat diakses |
+| PASS | BBC News North America | World News | 200 | 787 ms | Manifest dan segmen media dapat diakses |
+| PASS | CNA | World News | 200 | 332 ms | Manifest dan segmen media dapat diakses |
+| PASS | TRT World | World News | 200 | 519 ms | Manifest dan segmen media dapat diakses |
+| PASS | ABC News Live | World News | 200 | 782 ms | Manifest dan segmen media dapat diakses |
+| PASS | Sky News | World News | 200 | 837 ms | Manifest dan segmen media dapat diakses |
+| PASS | Euronews English | World News | 200 | 582 ms | Manifest dan segmen media dapat diakses |
+| PASS | CGTN English | World News | 200 | 388 ms | Manifest dan segmen media dapat diakses |
+| PASS | i24NEWS English | World News | 200 | 437 ms | Manifest dan segmen media dapat diakses |
+| PASS | Arirang TV | World News | 200 | 1092 ms | Manifest dan segmen media dapat diakses |
+| PASS | France 24 Arabic | World News | 200 | 467 ms | Manifest dan segmen media dapat diakses |
+| PASS | CBS News 24/7 | World News | 200 | 805 ms | Manifest dan segmen media dapat diakses |
+| PASS | Bloomberg Television US | Business | 200 | 363 ms | Manifest dan segmen media dapat diakses |
+| PASS | Yahoo! Finance | Business | 200 | 271 ms | Manifest dan segmen media dapat diakses |
+| PASS | CGTN Global Biz | Business | 200 | 226 ms | Manifest dan segmen media dapat diakses |
+| FAIL | NASA TV Media | Documentary | 200 | 166 ms | Master playlist terbuka, tetapi variant gagal: URL tidak ditemukan (HTTP 404) |
+| PASS | Smithsonian Channel Selects | Documentary | 200 | 779 ms | Manifest dan segmen media dapat diakses |
+| PASS | Love Nature | Documentary | 200 | 835 ms | Manifest dan segmen media dapat diakses |
+| PASS | CGTN Documentary | Documentary | 200 | 380 ms | Manifest dan segmen media dapat diakses |
+| FAIL | Docurama | Documentary | 0 | 387 ms | [Errno -2] Name or service not known |
+| PASS | Wonder | Documentary | 200 | 284 ms | Manifest dan segmen media dapat diakses |
+| PASS | PBS Nature | Documentary | 200 | 125 ms | Manifest dan segmen media dapat diakses |
+| PASS | MagellanTV Now | Documentary | 200 | 335 ms | Manifest dan segmen media dapat diakses |
+| PASS | PBS Kids | Kids | 200 | 364 ms | Manifest dan segmen media dapat diakses |
+| PASS | Moonbug | Kids | 200 | 170 ms | Manifest dan segmen media dapat diakses |
+| PASS | Kartoon Channel | Kids | 200 | 758 ms | Manifest dan segmen media dapat diakses |
+| PASS | Biznet Kids | Kids | 200 | 1545 ms | Manifest dan segmen media dapat diakses |
+| PASS | Vevo Pop | Music | 200 | 493 ms | Manifest dan segmen media dapat diakses |
+| PASS | Vevo Country | Music | 200 | 869 ms | Manifest dan segmen media dapat diakses |
+| PASS | Stingray Remember the 80s | Music | 200 | 232 ms | Manifest dan segmen media dapat diakses |
+| PASS | Stingray Greatest Hits | Music | 200 | 134 ms | Manifest dan segmen media dapat diakses |
