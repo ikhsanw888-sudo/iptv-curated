@@ -1,21 +1,36 @@
-# IPTV Curated Playlist
+# IPTV Curated
 
-Playlist IPTV ringkas untuk STB, dibangun otomatis dari playlist publik iptv-org dan disaring berdasarkan negara, kategori, serta respons URL.
+Playlist IPTV ringkas yang dihasilkan otomatis dari playlist publik iptv-org.
 
-## URL playlist untuk STB
+## URL untuk STB
+
+### Semua kategori
 
 ```text
 https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist.m3u
 ```
 
-## Menjalankan pembaruan
+### Playlist khusus
 
-Buka **Actions → Update IPTV playlist → Run workflow**.
+```text
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-favorites.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-indonesia.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-news.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-business.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-documentary.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-kids.m3u
+https://raw.githubusercontent.com/ikhsanw888-sudo/iptv-curated/main/playlist-music.m3u
+```
 
-Workflow juga dijadwalkan berjalan setiap hari sekitar pukul 03.15 WIB.
+## Memperbarui playlist
 
-## Mengubah pilihan channel
+Buka **Actions → Update IPTV playlists → Run workflow**.
 
-Edit `config.json`, kemudian jalankan workflow kembali.
+Workflow juga dijadwalkan setiap hari sekitar pukul 03.15 WIB.
 
-> Stream yang merespons dari GitHub Actions belum tentu dapat dimainkan dari semua jaringan atau perangkat karena pembatasan wilayah, ISP, codec, dan perubahan URL dari penyedia.
+## Mengubah daftar pilihan
+
+Edit `config.json`, commit, push, kemudian jalankan workflow kembali.
+
+> Hasil pengecekan dari GitHub Actions dapat berbeda dari koneksi rumah karena
+> pembatasan wilayah, ISP, codec, token stream, atau perubahan dari penyedia.

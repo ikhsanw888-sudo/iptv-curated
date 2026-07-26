@@ -1,4 +1,4 @@
-name: Update IPTV playlist
+name: Update IPTV playlists
 
 on:
   workflow_dispatch:
@@ -9,34 +9,34 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-iptv-playlist
+  group: update-iptv-playlists
   cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Build playlist
+      - name: Build playlists
         run: python update_playlist.py
 
-      - name: Commit changes
+      - name: Commit generated playlists
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add playlist.m3u
+          git add playlist*.m3u
           if git diff --cached --quiet; then
-            echo "No changes."
+            echo "No playlist changes."
           else
-            git commit -m "Update active IPTV playlist"
+            git commit -m "Update curated IPTV playlists"
             git push
           fi
